@@ -80,29 +80,29 @@
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)..\..\common\lib\msvc\$(PlatformTarget)_$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)intermediate\$(PlatformTarget)_$(Configuration)\</IntDir>
-    <IncludePath>$(ProjectDir)..\..\common\inc;$(ProjectDir)..\..\common\inc\mathutil;$(ProjectDir)..\..\common\inc\mtutil;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\..\common\lib\msvc\$(PlatformTarget)_$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\..\common\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
     <OutDir>$(ProjectDir)..\..\common\lib\msvc\$(PlatformTarget)_$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)intermediate\$(PlatformTarget)_$(Configuration)\</IntDir>
-    <IncludePath>$(ProjectDir)..\..\common\inc;$(ProjectDir)..\..\common\inc\mathutil;$(ProjectDir)..\..\common\inc\mtutil;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\..\common\lib\msvc\$(PlatformTarget)_$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\..\common\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)..\..\common\lib\msvc\$(PlatformTarget)_$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)intermediate\$(PlatformTarget)_$(Configuration)\</IntDir>
-    <IncludePath>$(ProjectDir)..\..\common\inc;$(ProjectDir)..\..\common\inc\mathutil;$(ProjectDir)..\..\common\inc\mtutil;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\..\common\lib\msvc\$(PlatformTarget)_$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\..\common\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(ProjectDir)..\..\common\lib\msvc\$(PlatformTarget)_$(Configuration)\</OutDir>
     <IntDir>$(ProjectDir)intermediate\$(PlatformTarget)_$(Configuration)\</IntDir>
-    <IncludePath>$(ProjectDir)..\..\common\inc;$(ProjectDir)..\..\common\inc\mathutil;$(ProjectDir)..\..\common\inc\mtutil;$(IncludePath)</IncludePath>
-    <LibraryPath>$(ProjectDir)..\..\common\lib\msvc\$(PlatformTarget)_$(Configuration);$(LibraryPath)</LibraryPath>
+    <IncludePath>$(ProjectDir)..\..\common\inc;$(IncludePath)</IncludePath>
+    <LibraryPath>$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
