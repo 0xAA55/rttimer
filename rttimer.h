@@ -5,7 +5,7 @@
 //-----------------------------------------------------------------------------
 
 #ifndef _RTTIMER_H_
-#define _RTTIMER_H_
+#define _RTTIMER_H_ 1
 
 #include<stdint.h>
 
