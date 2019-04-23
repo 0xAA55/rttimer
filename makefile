@@ -5,12 +5,17 @@ RANLIB = $(GCC_PREFIX)gcc-ranlib
 OPTIMIZATIONS=-g -O3 -fdata-sections -ffunction-sections -fmerge-all-constants -flto -fuse-linker-plugin -ffat-lto-objects
 CFLAGS=-Wall $(OPTIMIZATIONS)
 
-includes = $(wildcard *.h)
+OBJS=rttimer.o
 
-%.o: %.c ${includes}
-	$(CC) -c $(CFLAGS) -o $@ $<
+all: librttimer.a
+
+-include $(OBJS:.o=.d)
+
+%.o: %.c
+	$(CC) -c $(CFLAGS) $*.c -o $*.o
+	$(CC) -MM $(CFLAGS) $*.c > $*.d
 	
-librttimer.a: rttimer.o
+librttimer.a: $(OBJS)
 	$(AR) rcu $@ $+
 	$(RANLIB) $@
 
