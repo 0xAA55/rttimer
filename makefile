@@ -20,4 +20,4 @@ librttimer.a: $(OBJS)
 	$(RANLIB) $@
 
 clean:
-	del *.o *.a
+	del *.o *.a *.d
