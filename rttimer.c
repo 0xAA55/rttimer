@@ -2,7 +2,7 @@
 
 #include<string.h>
 
-#if _WIN32
+#ifdef _WIN32
 #  include<Windows.h>
 #else
 #  define UNIX_CLOCK_GETTIME
