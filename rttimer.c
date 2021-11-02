@@ -23,7 +23,7 @@ static double _get_raw_time(rttimer_p tmr)
 
 	QueryPerformanceCounter(&li);
 	return li.QuadPart / tmr->perf_freq;
-#elif UNIX_CLOCK_GETTIME
+#elif defined(UNIX_CLOCK_GETTIME)
 	struct timespec ts;
 
 	if(clock_gettime(CLOCK_MONOTONIC_RAW, &ts) == 0)
@@ -50,7 +50,7 @@ void rttimer_init(rttimer_p tmr, int init_pause)
 
 	QueryPerformanceFrequency(&li);
 	tmr->perf_freq = (time_real_t)li.QuadPart;
-#elif UNIX_CLOCK_GETTIME
+#elif defined(UNIX_CLOCK_GETTIME)
 	tmr->perf_freq = CLOCKS_PER_SEC;
 #endif
 
