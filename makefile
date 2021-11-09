@@ -8,7 +8,7 @@ OBJS=rttimer.o
 all: librttimer.a
 	
 librttimer.a: $(OBJS)
-	$(AR) rcu $@ $+
+	$(AR) rc $@ $+
 	$(RANLIB) $@
 
 clean:
